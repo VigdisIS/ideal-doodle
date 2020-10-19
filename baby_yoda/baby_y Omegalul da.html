@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas
+      id="omegalul"
+      width="650"
+      height="340"
+      style="border: 1px solid black"
+    ></canvas>
+    <script>
+      var c = document.getElementById("omegalul");
+      var ctx = c.getContext("2d");
+
+      //FARGE
+
+      //Hake/hals fyll
+      ctx.strokeStyle = "#749974";
+      ctx.fillStyle = "#749974";
+      ctx.beginPath();
+      ctx.moveTo(400, 220);
+      ctx.lineTo(200, 200);
+      ctx.lineTo(500, 100);
+      ctx.stroke();
+      ctx.fill();
+
+      //V.ørefyll
+      ctx.beginPath();
+      ctx.moveTo(230, 68);
+      ctx.lineTo(218, 74);
+      ctx.lineTo(214, 75);
+      ctx.lineTo(200, 75);
+      ctx.lineTo(175, 77);
+      ctx.lineTo(50, 75);
+      ctx.lineTo(45, 78);
+      ctx.lineTo(71, 103);
+      ctx.lineTo(183, 161);
+      ctx.lineTo(260, 140);
+      ctx.lineTo(225, 90);
+      ctx.lineTo(219, 85);
+      ctx.strokeStyle = "DarkSeaGreen";
+      ctx.fillStyle = "DarkSeaGreen";
+      ctx.stroke();
+      ctx.fill();
+
+      //H.ørefyll
+      ctx.beginPath();
+      ctx.moveTo(440, 60);
+      ctx.lineTo(465, 68);
+      ctx.lineTo(625, 40);
+      ctx.lineTo(625, 45);
+      ctx.lineTo(600, 64);
+      ctx.lineTo(525, 140);
+      ctx.lineTo(450, 140);
+      ctx.stroke();
+      ctx.fill();
+
+      //H.øre - skygge
+      ctx.beginPath();
+      ctx.moveTo(450, 120);
+      ctx.lineTo(460, 100);
+      ctx.lineTo(472, 90);
+      ctx.lineTo(480, 85);
+      ctx.lineTo(500, 80);
+      ctx.lineTo(620, 47);
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 6;
+      ctx.shadowOffsetY = 4;
+      ctx.shadowColor = "#749974";
+      ctx.strokeStyle = "#749974";
+      ctx.stroke();
+      ctx.fillStyle = "#749974";
+      ctx.fill();
+
+      //V. øre - skygge
+      ctx.beginPath();
+      ctx.moveTo(230, 146);
+      ctx.lineTo(220, 134);
+      ctx.lineTo(210, 120);
+      ctx.lineTo(205, 112);
+      ctx.lineTo(190, 100);
+      ctx.lineTo(52, 83);
+      ctx.shadowOffsetX = 6;
+      ctx.shadowOffsetY = 9;
+      ctx.stroke();
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(240, 146);
+      ctx.lineTo(180, 130);
+      ctx.lineTo(185, 150);
+      ctx.stroke();
+      ctx.fill();
+
+      //KODE
+
+      //Hode
+      ctx.shadowBlur = "0";
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.fillStyle = "darkseagreen";
+      ctx.beginPath();
+      ctx.moveTo(219, 107);
+      ctx.bezierCurveTo(219, 200, 460, 200, 460, 107);
+      ctx.moveTo(219, 107);
+      ctx.bezierCurveTo(219, 0, 460, 0, 460, 107);
+      ctx.strokeStyle = "seagreen";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      ctx.fill();
+
+      //H.øre
+
+      ctx.beginPath();
+      ctx.arc(467, 6, 60, (2 * Math.PI) / 3, Math.PI / 3, true);
+
+      ctx.moveTo(470, 65);
+      ctx.lineTo(620, 40);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(625, 41, 4, Math.PI, 2.3 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(627, 45);
+      ctx.lineTo(480, 85);
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(490, 112, 30, 0.9 * Math.PI, 1.55 * Math.PI);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(440, 120, 40, 1.75 * Math.PI, 2 * Math.PI);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(628, 44);
+      ctx.lineTo(600, 65);
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(530, 54, 70, 0.05 * Math.PI, 0.45 * Math.PI);
+      ctx.fill();
+      ctx.strokeStyle = "seagreen";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(200, 15, 60, (2 * Math.PI) / 3.5, Math.PI / 3, true);
+      ctx.strokeStyle = "seagreen";
+      ctx.stroke();
+
+      //V.øre
+
+      ctx.beginPath();
+      ctx.moveTo(187, 75);
+      ctx.lineTo(50, 74);
+      ctx.strokeStyle = "SeaGreen";
+      ctx.stroke();
+
+      //Venstre øretupp
+      ctx.beginPath();
+      ctx.arc(50, 78, 4, 1.7 * Math.PI, 0.4 * Math.PI, true);
+      ctx.moveTo(50, 82);
+      ctx.lineTo(70, 102);
+      ctx.stroke();
+
+      //forts.V ØRE
+
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.moveTo(49, 81);
+      ctx.lineTo(190, 100);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(140, 160, 80, 1.73 * Math.PI, 1.86 * Math.PI);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(212, 125);
+      ctx.lineTo(245, 160);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(191, 129, 20, 0.48 * Math.PI, 1.3 * Math.PI);
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 6;
+      ctx.shadowOffsetY = 4;
+      ctx.shadowColor = "#749974";
+      ctx.stroke();
+      ctx.fillStyle = "#749974";
+      ctx.fill();
+
+      ctx.beginPath();
+
+      ctx.lineWidth = 3;
+      ctx.arc(136, 80, 70, 0.4 * Math.PI, 0.9 * Math.PI);
+      ctx.shadowBlur = "0";
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.stroke();
+      ctx.fillStyle = "darkseagreen";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(150, 147);
+      ctx.lineTo(180, 160);
+      ctx.stroke();
+
+      //V.øye
+
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.arc(300, 115, 60, 1.1 * Math.PI, 1.5 * Math.PI);
+      ctx.strokeStyle = "seagreen";
+      ctx.shadowColor = "black";
+      ctx.shadowBlur = 20;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(290, 110, 40, 1 * Math.PI, 1.8 * Math.PI);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(310, 145, 70, 1.16 * Math.PI, 1.44 * Math.PI);
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(288, 90, 40, 0.13 * Math.PI, 0.87 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(188, 250, 200, 1.673 * Math.PI, 1.74 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      //FARGE HVIT V.ØYE
+      ctx.beginPath();
+      ctx.moveTo(253, 107);
+      ctx.lineTo(323, 106);
+      ctx.lineTo(323, 104);
+      ctx.lineTo(290, 80);
+      ctx.lineTo(290, 80);
+      ctx.lineTo(253, 107);
+      ctx.strokeStyle = "white";
+      ctx.stroke();
+      ctx.fill();
+
+      //FARGE B. V.ØYE
+      ctx.beginPath();
+      ctx.moveTo(265, 107);
+      ctx.lineTo(273, 127);
+      ctx.lineTo(289, 130);
+      ctx.lineTo(310, 124);
+      ctx.lineTo(310, 90);
+      ctx.lineTo(290, 78);
+      ctx.lineTo(270, 87);
+      ctx.lineTo(265, 107);
+      ctx.strokeStyle = "SaddleBrown";
+      ctx.stroke();
+      ctx.fillStyle = "SaddleBrown";
+      ctx.fill();
+
+      //Forts. V.øye
+
+      ctx.beginPath();
+      ctx.arc(288, 107, 27, 0.7 * Math.PI, 1.3 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.fillStyle = "SaddleBrown";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(288, 107, 16, 0 * Math.PI, 2 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "black";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(288, 107, 27, 1.75 * Math.PI, 2.3 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "SaddleBrown";
+      ctx.fill();
+
+      //H.øye
+      ctx.beginPath();
+      ctx.arc(393, 100, 43, 1.2 * Math.PI, 1.96 * Math.PI);
+      ctx.strokeStyle = "seagreen";
+      ctx.shadowColor = "black";
+      ctx.shadowBlur = 20;
+      ctx.strokeStyle = "seagreen";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(384, 103, 60, 1.45 * Math.PI, 1.96 * Math.PI);
+      ctx.stroke();
+
+      //FARGE H.ØYE HVIT
+      ctx.beginPath();
+      ctx.shadowBlur = 0;
+      ctx.moveTo(361, 110);
+      ctx.lineTo(391, 121);
+      ctx.lineTo(434, 95);
+      ctx.lineTo(386, 70);
+      ctx.lineTo(370, 80);
+      ctx.strokeStyle = "white";
+      ctx.fillStyle = "white";
+      ctx.stroke();
+      ctx.fill();
+
+      //Forts. H.ØYE
+
+      ctx.beginPath();
+      ctx.arc(390, 120, 50, 1.4 * Math.PI, 1.85 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(390, 72, 50, 0.15 * Math.PI, 0.5 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      //FARGE H.ØYE BRUN
+      ctx.beginPath();
+      ctx.shadowBlur = 0;
+      ctx.moveTo(367, 112);
+      ctx.lineTo(391, 121);
+      ctx.lineTo(408, 119);
+      ctx.lineTo(419, 112);
+      ctx.lineTo(412, 75);
+      ctx.lineTo(400, 72);
+      ctx.lineTo(390, 70);
+      ctx.lineTo(370, 80);
+
+      ctx.strokeStyle = "SaddleBrown";
+      ctx.fillStyle = "SaddleBrown";
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(430, 160, 100, 1.28 * Math.PI, 1.36 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(390, 97, 16, 0 * Math.PI, 2 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.fillStyle = "black";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(405, 100, 40, 0.9 * Math.PI, 1.18 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "SaddleBrown";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(380, 100, 40, 1.8 * Math.PI, 2.12 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(360, 110);
+      ctx.lineTo(390, 122);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(360, 110);
+      ctx.lineTo(370, 80);
+      ctx.stroke();
+
+      //nese
+      ctx.beginPath();
+      ctx.arc(350, 110, 20, 0.32 * Math.PI, 0.72 * Math.PI);
+      ctx.strokeStyle = "seagreen";
+      ctx.stroke();
+
+      //Panneting
+      ctx.beginPath();
+      ctx.arc(328, 76, 30, 1.3 * Math.PI, 1.64 * Math.PI);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(350, 76, 30, 1.4 * Math.PI, 1.7 * Math.PI);
+
+      ctx.moveTo(340, 48);
+      ctx.lineTo(343, 76);
+      ctx.lineTo(367, 52);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(343, 76);
+      ctx.lineTo(311, 50);
+      ctx.stroke();
+
+      //munn
+      ctx.beginPath();
+      ctx.arc(350, 230, 80, 1.35 * Math.PI, 1.65 * Math.PI);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+
+      //FARGE ROBE YODA
+
+      ctx.beginPath();
+      ctx.moveTo(500, 340);
+      ctx.lineTo(680, 300);
+      ctx.lineTo(630, 240);
+      ctx.lineTo(620, 200);
+      ctx.lineTo(505, 110);
+      ctx.lineTo(480, 110);
+      ctx.lineTo(355, 200);
+      ctx.lineTo(320, 230);
+      ctx.strokeStyle = "wheat";
+      ctx.fillStyle = "wheat";
+      ctx.stroke();
+      ctx.fill();
+
+      //ROBE YODA
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(512, 115);
+      ctx.lineTo(620, 200);
+      ctx.strokeStyle = "tan";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(485, 145, 40, 1.8 * Math.PI, 1.1 * Math.PI, true);
+      ctx.stroke();
+      ctx.fillStyle = "wheat";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(447, 130);
+      ctx.lineTo(345, 210);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(430, 195);
+      ctx.lineTo(500, 130);
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.arc(520, 280, 100, 0.5 * Math.PI, 1.72 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "wheat";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.moveTo(434, 230);
+      ctx.lineTo(380, 260);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.arc(520, 290, 60, 0.5 * Math.PI, 1.8 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "#f5e6cb";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(555, 240);
+      ctx.lineTo(610, 300);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(530, 240, 100, 1.86 * Math.PI, 2.02 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(580, 200);
+      ctx.lineTo(680, 290);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.moveTo(470, 270);
+      ctx.lineTo(530, 235);
+      ctx.lineTo(570, 305);
+      ctx.lineTo(470, 370);
+      ctx.fillStyle = "#333333";
+      ctx.stroke();
+      ctx.fill();
+
+      //farge lys robe
+      ctx.fillStyle = "#f5e6cb";
+      ctx.strokeStyle = "#f5e6cb";
+      ctx.beginPath();
+      ctx.moveTo(560, 250);
+      ctx.lineTo(650, 340);
+      ctx.lineTo(400, 340);
+      ctx.stroke();
+      ctx.fill();
+
+      //Skygger robe YODa
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = -3;
+      ctx.shadowOffsetY = -5;
+      ctx.shadowColor = "#e3cea6";
+      ctx.fillStyle = "#e3cea6";
+      ctx.strokeStyle = "#e3cea6";
+
+      ctx.beginPath();
+      ctx.moveTo(498, 130);
+      ctx.lineTo(495, 128);
+      ctx.lineTo(450, 158);
+      ctx.lineTo(428, 196);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.shadowOffsetX = 3;
+      ctx.shadowOffsetY = 5;
+      ctx.moveTo(420, 300);
+      ctx.lineTo(440, 225);
+      ctx.lineTo(470, 200);
+      ctx.lineTo(520, 185);
+      ctx.lineTo(560, 195);
+      ctx.lineTo(631, 250);
+      ctx.lineTo(578, 200);
+      ctx.lineTo(555, 186);
+      ctx.lineTo(555, 186);
+      ctx.lineTo(525, 181);
+      ctx.lineTo(490, 185);
+      ctx.lineTo(460, 200);
+      ctx.lineTo(434, 230);
+      ctx.lineTo(425, 250);
+      ctx.lineTo(422, 250);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.shadowBlur = "0";
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.moveTo(422, 250);
+      ctx.lineTo(428, 235);
+      ctx.lineTo(380, 262);
+      ctx.lineTo(413, 300);
+      ctx.stroke();
+      ctx.fill();
+
+      //FARGE HÅND YODA
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.beginPath();
+      ctx.moveTo(516, 335);
+      ctx.lineTo(558, 288);
+      ctx.lineTo(530, 235);
+      ctx.lineTo(500, 256);
+      ctx.lineTo(486, 275);
+
+      ctx.strokeStyle = "darkseagreen";
+      ctx.fillStyle = "darkseagreen";
+      ctx.stroke();
+      ctx.fill();
+
+      //YODA HAND
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.arc(455, 335, 65, 1.2 * Math.PI, 2.3 * Math.PI);
+      ctx.strokeStyle = "seagreen";
+      ctx.fillStyle = "darkseagreen";
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(520, 335);
+      ctx.lineTo(560, 290);
+
+      ctx.moveTo(486, 275);
+      ctx.lineTo(500, 255);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = "2";
+      ctx.moveTo(425, 340);
+      ctx.lineTo(460, 275);
+
+      ctx.moveTo(430, 400);
+      ctx.lineTo(490, 300);
+      ctx.stroke();
+
+      //SKYGGE Innside av blanket, hånd YODA
+      ctx.lineWidth = "3";
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 5;
+      ctx.shadowColor = "#333333";
+      ctx.strokeStyle = "rgb(51, 51, 51,0.5)";
+      ctx.fillStyle = "rgb(51, 51, 51,0.5)";
+
+      ctx.beginPath();
+      ctx.shadowColor = "rgb(51, 51, 51,0.5)";
+      ctx.moveTo(551, 305);
+      ctx.lineTo(560, 290);
+      ctx.lineTo(529, 235);
+      ctx.lineTo(485, 264);
+      ctx.lineTo(490, 268);
+      ctx.lineTo(500, 264);
+      ctx.lineTo(510, 266);
+      ctx.lineTo(530, 277);
+      ctx.lineTo(536, 290);
+      ctx.lineTo(540, 300);
+      ctx.lineTo(537, 320);
+      ctx.stroke();
+      ctx.fill();
+
+      //FARGE BLANKET YODA
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.fillStyle = "tan";
+      ctx.moveTo(90, 360);
+      ctx.lineTo(500, 360);
+      ctx.lineTo(264, 142);
+      ctx.lineTo(200, 152);
+      ctx.lineTo(130, 200);
+      ctx.strokeStyle = "tan";
+      ctx.stroke();
+      ctx.fill();
+
+      //BLANKET YODA
+      ctx.beginPath();
+      ctx.strokeStyle = "sienna";
+      ctx.moveTo(193, 155);
+      ctx.lineWidth = 3;
+      ctx.lineTo(80, 228);
+      ctx.lineTo(100, 310);
+      ctx.lineTo(110, 270);
+      ctx.fillStyle = "#bfa37e";
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "tan";
+      ctx.lineWidth = 3;
+      ctx.arc(240, 220, 80, 1.1 * Math.PI, 1.6 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(230, 200);
+      ctx.lineTo(406, 360);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(190, 270, 80, 1 * Math.PI, 1.7 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "tan";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(264, 142);
+      ctx.lineTo(500, 360);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(110, 270);
+      ctx.lineTo(90, 360);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.shadowColor = "#bfa37e";
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 6;
+      ctx.shadowOffsetY = 4;
+      ctx.lineWidth = 2;
+      ctx.arc(190, 260, 30, 0.7 * Math.PI, 1.7 * Math.PI);
+      ctx.stroke();
+      ctx.fillStyle = "#bfa37e";
+      ctx.fill();
+
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.beginPath();
+      ctx.moveTo(167, 280);
+      ctx.lineTo(220, 360);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = "sienna";
+      ctx.moveTo(700, 230);
+      ctx.lineTo(500, 360);
+      ctx.lineTo(720, 360);
+      ctx.stroke();
+      ctx.fillStyle = "#bfa37e";
+      ctx.fill();
+
+      //DETAILS
+
+      //øye.detalj.V
+      ctx.beginPath();
+      ctx.arc(295, 113, 15, 1.3 * Math.PI, 1.8 * Math.PI);
+      ctx.lineWidth = "0.05";
+      ctx.strokeStyle = "white";
+      ctx.fillStyle = "white";
+      ctx.stroke();
+      ctx.fill();
+
+      //øye.detalj.H
+      ctx.beginPath();
+      ctx.arc(397, 103, 15, 1.3 * Math.PI, 1.8 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      //panneting.detalj.H
+      ctx.beginPath();
+      ctx.arc(350, 59, 10, 1.2 * Math.PI, 1.6 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      //panneting.detalj.V
+      ctx.beginPath();
+      ctx.arc(330, 59, 10, 1.4 * Math.PI, 1.8 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+
+      //skygge teppe
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 6;
+      ctx.shadowOffsetY = -4;
+      ctx.shadowColor = "#bfa37e";
+
+      ctx.lineWidth = "1";
+      ctx.beginPath();
+      ctx.moveTo(170, 280);
+      ctx.lineTo(208, 340);
+      ctx.lineTo(300, 340);
+      ctx.lineTo(190, 240);
+      ctx.strokeStyle = "#bfa37e";
+      ctx.fillStyle = "#bfa37e";
+      ctx.stroke();
+      ctx.fill();
+    </script>
+  </body>
+</html>
