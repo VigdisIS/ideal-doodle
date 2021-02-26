@@ -1,7 +1,10 @@
 ## bebby Yoda
 
 result:
-![result](https://github.com/VigdisIS/ideal-doodle/tree/master/baby_yoda/botched_yoda.png?raw=true)
+
+![result](https://github.com/VigdisIS/ideal-doodle/blob/master/baby_yoda/botched_yoda.png)
+
 
 ref. img:
-![ref. img](https://github.com/VigdisIS/ideal-doodle/tree/master/baby_yoda/reference_img.jpg?raw=true)
+
+![ref. img](https://github.com/VigdisIS/ideal-doodle/blob/master/baby_yoda/reference_img.jpg)
